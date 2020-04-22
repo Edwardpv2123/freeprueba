@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login |FreeFire Trucos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-form">
+        <div class="toggle">
+            <span> </span>
+        </div>
+        
+        <div class="formulario">
+            <h2>Iniciar Sesión</h2>
+            <form method="post" action="ingresar.php">
+                <input type="email" placeholder="Correo" name="correo" required>
+                <input type="password" placeholder="Contraseña" name="clave" required>
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+        </div>
+        
+        <div class="formulario">
+            <h2>Crea tu Cuenta</h2>
+            <form method="post" action="validar.php">
+                <input type="email" id="correo" name="correo" placeholder="Correo Electronico" class="input-100" required>
+                
+                <input type="password" id="pass1" name="pass1" placeholder="Contraseña" class="input-48" required>
+                
+                <input type="password" id="pass2" placeholder="Confirmar Contraseña" required>
+                
+                <span id="error2"></span>
+                
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+        <div class="reset-password">
+            <span>Registrarse con Facebook</span>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

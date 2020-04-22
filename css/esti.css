@@ -1,0 +1,365 @@
+@font-face {
+    font-family:"Fredoka One";
+    src: url(../fonts/PatrickHand-Regular.ttf);
+}
+@font-face {
+    font-family:"LiuJianMaoCao";
+    src: url(../fonts/LiuJianMaoCao-Regular.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+}
+/*-------------Estilo base-----------------*/
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.container--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+}
+
+/*-------------Estilos Header-----------------*/
+
+.main-header {
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #42B699;
+    padding: 10px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 100;
+}
+
+.main-header__contactInfo__phone {
+    background: #42B699;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.main-header__contactInfo__address {
+    padding: 10px;
+    margin: 0;
+}
+/*-----------Estilos del Menu--------------*/
+.main-nav {
+    width: 100%;
+    position: relative;
+    z-index: 2000;
+    padding: 10px;
+}
+.icon-menu {
+    display: block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.65);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s linear;
+}
+
+.menu__link {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.menu__link:hover {
+    background: #42B699;
+}
+.menu__link--select {
+    background: #42B699;
+}
+.mostrar {
+    height: 196px;
+}
+
+/*------------------Estilo Banner----------------*/
+.banner {
+    margin-top: -59px;
+    position: relative;
+}
+.banner:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    top: 0;
+}
+.banner__img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.banner__content {
+    width: 90%;
+    color: white;
+    text-align: center;
+    position:absolute;
+    z-index: 1500;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*---------------Estilos Principales------------------*/
+
+.group--color .container {
+    background: #42B699;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.main__title {
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 100;
+}
+.column__title {
+    font-size: 1.3em;
+}
+
+.main__about__description .column:nth-child(2) {
+    padding: 10px;
+}
+
+/*----------Estilos del Footer-------------*/
+.main-footer {
+    background: #221;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: .8em;
+}
+
+.copy {
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+/*----------Estilos Respoonsive---------------*/
+@media screen and (min-width:480px) {
+    .logo {
+        color: white;
+    }
+    /*.main-nav {
+        padding: 0;
+    }
+    .icon-menu {
+        display: none;
+    }
+    .menu {
+        position: static;
+        display: flex;
+        height: auto;
+        width: auto;
+    }
+    .menu__link {
+        padding: 10px;
+    }*/
+    .main-header__contactInfo {
+        text-align: right;
+    }
+    .main-header__contactInfo__phone {
+        background: none;
+    }
+    .main-header__contactInfo__address {
+        color: white;
+    }
+    .main__about__description .column--50:nth-child(2) .column__title {
+        margin-left: 10px;
+    }
+    .main__about__description .column:nth-child(1) img {
+        margin-top: 30px;
+    }
+    .main-nav {
+        background: rgba(0,0,0,0.85)
+    }
+    .banner {
+        margin-top: -149px;
+        z-index: -1000;
+    }
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+    .column--50 {
+        width: 49%;
+    }
+    .column-33 {
+        width: 30%;
+    }
+}
+/*----------*/
+@media screen and (min-width:780px) {
+    
+    .main__title {
+        font-size: 2.2em;
+    }
+    .main__about__description {
+        margin-top: 30px;
+    }
+    .main__about__description .column:nth-child(1) img {
+        margin-top: 0px;
+    }
+    .main__about__description .column--50:nth-child(2) {
+        font-size: 1em;
+    }
+    .main__about__description .column--50:nth-child(2) .column__txt {
+        line-height: 30px;
+    }
+    .main__about__description .column--50:nth-child(2) .column__title {
+        margin-left: 100px;
+    }
+    
+    .column__title {
+        font-size: 1em;
+    }
+    /*222222*/
+    .main-nav {
+        padding: 0;
+    }
+    .icon-menu {
+        display: none;
+    }
+    .menu {
+        position: static;
+        display: flex;
+        height: auto;
+        width: auto;
+    }
+    .menu__link {
+        padding: 20px;
+    }
+    .group--color .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+    .main__title {
+        font-size: 2.3em;
+    }
+    .main-footer {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .container {
+        width: 1100px;
+    }
+    .logo {
+        font-size: 2em;
+        padding: 0;
+    }
+    .main-header__contactInfo__phone, .main-header__contactInfo__address {
+        padding-right: 0;
+        font-size: 1.15em;
+    }
+    .banner__img {
+        height: 801px;
+        margin-top: -154px;
+    }
+    .banner__content {
+        font-size: 2.5em;
+    }
+    .main__about__description .column--50:nth-child(2) .column__txt {
+        line-height: 50px;
+    }
+    .main__about__description .column--50:nth-child(2) .column__title {
+        margin-left: 270px;
+    }
+    .main__about__description .column:nth-child(1) img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+    .main-footer {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
